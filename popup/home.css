@@ -7,3 +7,7 @@ html, body {
 .panel {
     margin: 10px;
 }
+
+.button-container {
+    text-align: center;
+}
