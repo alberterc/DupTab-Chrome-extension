@@ -10,11 +10,11 @@
 
     "action": {
       "default_title": "DupTab",
-      "default_popup": "popup/home.html"
+      "default_popup": "popup/popup.html"
     },
   
     "background": {
-      "service_worker": "background.js"
+      "service_worker": "service_worker.js"
     },
    
     "commands": {
