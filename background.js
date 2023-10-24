@@ -1,16 +1,17 @@
+var browser = browser || chrome;
 var openedTabs = [];
 
-chrome.tabs.onHighlighted.addListener(handleHighlighted);
+browser.tabs.onHighlighted.addListener(handleHighlighted);
 function handleHighlighted(highlightInfo) {
     console.log(highlightInfo);
 }
 
-chrome.tabs.query({ currentWindow: true }, (tabs) => {
+browser.tabs.query({ currentWindow: true }, (tabs) => {
     openedTabs = tabs;
     let duplicateTabsIds = getDuplicateTabsIds(tabs);
     let duplicateTabsIdsLength = duplicateTabsIds.length;
     // for (let i = 0; i < duplicateTabsIdsLength; i++) {
-    //     chrome.tabs.update(
+    //     browser.tabs.update(
     //         duplicateTabsIds[i],
     //         {
     //             active: false,
